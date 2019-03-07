@@ -1,0 +1,14 @@
+SSH
+
+ssh root@ecell-nitt.org
+pswd: ninnuchampesta~8
+
+clone to the computer
+copy shell command
+remote comp
+go into cd /var/www/html
+
+sudocp 
+destination 
+
+<a class="big-link-1 btn " href="https://goo.gl/forms/P6IjG2NCzqVMOL7T2" style="color: goldenrod; background-color: black;">Register</a>

@@ -1,0 +1,9 @@
+IMPORTANT GITBASH COMMANDS
+
+git init
+git add .
+git commit -m "asd"
+git push -u origin master
+
+git remote add name url-link 
+git push name/url-link master

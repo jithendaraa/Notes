@@ -1,0 +1,101 @@
+New React Project:
+create-react-app app-folder-name
+or
+npx create-react-app app-folder-name
+
+For CSS Modules:
+
+npm run eject
+
+Then goto Config folder -> Config -> webpack.config..(1)
+in 
+test: /\.css$/,
+
+add under importLoaders, the following 
+modules: true,
+localIdentName: '[name]__[local]__[hash:base64:5]', 
+
+
+for proptypes
+npm install --save prop-types
+
+npm install axios
+
+go to the other config file and under test: '/\.css$/':
+add
+modules: true,
+localIdentName: '[name]__[local]__[hash:base64:5]', 
+
+
+ROUTERS:
+
+npm install --save react-router-dom [contains BrowserRouter, Switch, Route, Redirect etc]
+
+REDUX:
+npm install --save react-redux
+npm install --save redux
+
+
+<--------------INDEX.JS------------>
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import reducer from './store/reducer';
+
+const store = createStore(reducer);
+<Provider store={store}><App /></Provider>
+
+
+store-->reducer.js
+	actions.js
+
+<---------reducer.js---------->
+import * as actionTypes from './actions';
+
+
+const initialState = {};
+
+const reducer = (state = initialState, action) => {
+	switch(action.type){
+
+	 	actionTypes.CASE_A:
+			return {...state};
+	}
+	return state;
+};
+
+
+
+export defdault reducer
+
+<-----------mainfile.js---------->
+import { connect } from 'react-redux';
+
+const mapStatetoProps = state => {};
+const mapDispatchToProps = dispatch => {};
+
+export default connect(mapStatetoProps, mapDispatchToProps)(mainComponentToBeReturned);
+
+
+
+<----Middlewares------>
+ 
+Function which operates before the dispatched action reaches the reducer.js
+It's generally present in index.js the js file where we create the store.
+
+const logger = state => {
+	return next => {
+		return action => {
+			console.log(action);
+				...
+		}
+	}
+}	
+
+
+zalmoxisus github for compose and applyMiddleware and thunk connections.[Async code]
+
+npm install --save redux-thunk
+
+npm install jquery popper.js
+npm install bootstrap
